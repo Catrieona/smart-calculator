@@ -1,41 +1,41 @@
 class SmartCalculator {
   constructor(initialValue) {
       this.value = [initialValue];
-     
+      
   }
 
   add(number) {
       this.value.push('+', number);
       return this;
-     
+      
   }
 
   subtract(number) {
     this.value.push('-', number);
     return this;
-    
+      
   }
 
   multiply(number) {
     this.value.push('*', number);
     return this;
-     
+      
   }
 
   devide(number) {
     this.value.push('/', number);
     return this;
-     
+      
+  }
 
   pow(number) {
     this.value.push('^', number);
     return this;
-     
+      
   }
 
   parse() {
     var temp = this.value
-    console.log(temp)
 
     for(let i=0; i < temp.length; i++){
       if(temp[i] == '^'){
@@ -72,7 +72,7 @@ class SmartCalculator {
   }
   
   valueOf(){
-    return this.parse
+    return this.parse()
   }
 }
 
